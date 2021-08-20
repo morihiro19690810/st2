@@ -1,0 +1,21 @@
+
+        <div class="questionline">
+    <% @questions.each do |question| %>
+    <% if question.ask == true then %>
+    <%= question.item %>
+    <% end %>
+    <% end %>
+</div>
+
+<%= form_for @idea do |youridea| %>
+<div class = "writeyouridea">
+<p>    <!--<%= youridea.label :回答を書く %>-->
+    <%= youridea.text_area :item, placeholder:"回答を書く(100文字以内)", size:"50x4", maxlength:"100" %>
+    <% if @idea.errors.any? %>
+    <%= @idea.errors.messages[:item][0] %>
+        <% end %></p>
+        <p>
+        <%= youridea.submit "回答する" %>
+</p>
+</div>
+<% end %>

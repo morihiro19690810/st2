@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sparkthink 50 あなたの考えを共有しましょう</title>
+    <%= csrf_meta_tags %>
+    <meta property="og:title" content＝"Sparkthink 50 あなたの考えを共有しましょう" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+ 
+  </head>
+
+  <body>
+    <header>
+      <div class="header_titles">
+      <span class="header_title">Sparkthink 50</span>
+      <span class="header_subtitle">Share your ideas</span>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to root_path do %>
+            <span id="visibility" class="material-icons-outlined">
+            visibility
+            </span>
+            <% end %>
+
+          </li>
+          <li>
+            <%= link_to new_idea_path do %>
+            <span id="edit" class="material-icons-outlined">
+            edit
+            </span>
+                        <% end %>
+          </li>
+          <li>
+               <%= link_to questions_path do %>
+            <span id="manage_accounts" class="material-icons-outlined">
+            manage_accounts
+            </span>
+                        <% end %>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+    <%= yield %>
+    </main>
+    <footer>
+      <span class="footer_text">
+        Developed by Morihiro
+      </span>
+    </footer>
+  </body>
+</html>

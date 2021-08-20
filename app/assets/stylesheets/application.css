@@ -1,0 +1,243 @@
+/*最初はReset CSS*/
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*ここからApplication*/
+
+
+html {
+  background-color: #ccffff;
+}
+
+body {
+  margin: 0;
+        padding-bottom: 60px;
+      box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background-color: white;
+  display: flex;
+  height: 80px;
+}
+
+.header_titles {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.header_title {
+  font-size: 3em;
+  padding:10px;
+  font-family: 'Oleo Script', cursive;
+}
+
+.header_subtitle {
+  font-size: 1.5em;
+  font-style:italic;
+}
+
+nav {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  position: relative;
+  line-height: 2em;
+  margin: 20px;
+  /*z-index: -1;*/
+}
+
+footer {
+width: 100%;
+height: 40px;
+      bottom: 0px;
+      text-align: center;
+      position: fixed;
+      background-color:white;
+      padding-top: 20px;
+      z-index: 1;
+      /* 背景色などは割愛します */
+}
+
+.questionbox {
+  /*display: inline-block;*/
+  margin: 10px;
+}
+
+.questionline {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.all_ideas {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+
+.individual_idea {
+  width:20vw;
+  background-color: white;
+ margin: 10px;
+    border-radius: 10px;
+  
+}
+#your_idea {
+  width:20vw;
+  font-size: 1.5em;
+  background-color: #FFFFCC;
+    font-weight: bold;
+ margin: 10px;
+    border-radius: 10px;
+}
+
+#your_idea a {
+  display:block;
+  text-decoration: none;
+  height: 100%;
+}
+
+#your_idea:hover {
+  background-color: #FFCCFF;
+}
+
+.questionbox input[type="text"] {
+        width: 90%;
+    }
+    
+.writeyouridea {
+  margin: 20px;
+}
+
+.writeyouridea textarea {
+ border: 1px solid #ddd;
+  border-radius: 10px;
+  /*border-color: blue;*/
+  /*margin-left: 40px;*/
+  padding-left: 1em;
+  padding-right: 1em;
+  /*height: 216px;*/
+  flex: 1;
+  /*width: 100%;*/
+  /*max-width: 410px;*/
+  /*background: #eaedf2;*/
+  font-size: 18px;
+}

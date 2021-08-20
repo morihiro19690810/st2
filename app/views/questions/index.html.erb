@@ -1,0 +1,43 @@
+<div class="questionbox">
+<%= form_for @question do |yourquestion| %>
+    <%= yourquestion.label :質問候補を書く %><br>
+    <%= yourquestion.text_field :item %><br>
+    <%= yourquestion.submit %>
+    <%end%>
+</div>
+
+
+<div class="questionbox">
+<p>以下の質問候補から質問を選択して、ボタンを押して下さい<br><%= link_to(questions_restart_path) do %>
+<button>Ask Question</button>
+<% end %>
+</p>
+
+
+    <% @questions.reverse_each do |question| %>
+    <div>
+    <%= radio_button_tag name= "radio" '','', question.ask, {"data-id" => question.id } %>
+    <%= question.item %>
+    <%= link_to "削除", question_path(question.id),
+                        method: :delete,
+                        data:{ confirm: "削除してもよろしいですか？"} %>
+    </div>
+    <% end %>
+    </div>
+
+
+
+
+
+
+
+<script>
+       $(function() {
+        $("input[type=radio]").click(function(){
+            $.post("/questions/" + $(this).data("id") + "/toggle");
+        });
+    }); 
+    
+</script>
+
+<!--INPUTとJSの両方をRadioにする-->

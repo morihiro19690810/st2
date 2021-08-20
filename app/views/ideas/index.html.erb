@@ -1,0 +1,73 @@
+
+        <div class="questionline">
+    <% @questions.each do |question| %>
+    <% if question.ask == true then %>
+    <%= question.item %>
+    <% end %>
+    <% end %>
+</div>
+
+<ul class = "all_ideas">
+    <% @ideas.each do |idea| %>
+    <li class = "individual_idea">
+    <%= idea.item %>
+    </li>
+    <% end %>
+
+   <li id="your_idea" class="individual_idea">    
+    <%= link_to new_idea_path do %>
+
+       回答を書く
+
+    <% end %>
+               </li>
+    
+</ul>
+
+<script>
+if (typeof timerstart === "Wundefined"){
+let timerstart = 0
+}
+console.log("page reloaded!");
+function startTimer() {
+  timerstart = setInterval("location.reload()", 3000);
+  console.log("started!");
+}
+function timerstop() {
+  console.log("stopping");
+  clearInterval(timerstart);
+}
+function timerrestart() {
+  console.log("restart");
+  timerstart = setInterval("location.reload()", 3000);
+  console.log("timer id is " + timerstart);
+}
+startTimer();
+document
+  .getElementById("your_idea")
+  .addEventListener("mouseenter", timerstop);
+document
+  .getElementById("your_idea")
+  .addEventListener("mouseleave", timerrestart);
+
+document
+  .getElementById("visibility")
+  .addEventListener("mouseenter", timerstop);
+document
+  .getElementById("visibility")
+  .addEventListener("mouseleave", timerrestart);
+
+document
+  .getElementById("edit")
+  .addEventListener("mouseenter", timerstop);
+document
+  .getElementById("edit")
+  .addEventListener("mouseleave", timerrestart);
+
+document
+  .getElementById("manage_accounts")
+  .addEventListener("mouseenter", timerstop);
+document
+  .getElementById("manage_accounts")
+  .addEventListener("mouseleave", timerrestart);
+</script>
