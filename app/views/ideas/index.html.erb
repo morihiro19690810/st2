@@ -25,7 +25,9 @@
 </ul>
 
 <script>
+if (timerstart === "undefined"){
 let timerstart = 0
+}
 console.log("page reloaded!");
 function startTimer() {
   timerstart = setInterval("location.reload()", 3000);
